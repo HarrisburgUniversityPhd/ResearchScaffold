@@ -1,0 +1,7 @@
+\chapter*{Abstract}
+
+Enter you abstract here.
+This is my abstract.
+It is about 150--300 words long.
+
+**Keywords**: Data Science, Bookdown

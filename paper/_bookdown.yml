@@ -1,0 +1,7 @@
+book_filename: "zzz_paper_zzz"
+output_dir: "./"
+repo: https://github.com/HarrisburgUniversityPhd/ResearchScaffold
+language:
+  ui:
+    chapter_name: "Chapter "
+delete_merged_file: true

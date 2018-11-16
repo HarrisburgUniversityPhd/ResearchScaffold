@@ -1,0 +1,6 @@
+bookdown::pdf_book:
+    toc: no
+    includes:
+        in_header: './style/preamble.tex'
+    latex_engine: xelatex
+    keep_tex: yes

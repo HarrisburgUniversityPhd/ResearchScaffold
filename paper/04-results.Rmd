@@ -1,0 +1,36 @@
+# Results
+
+This chapter includes your analyses and results.
+It should include:
+
+- General data analysis and results
+- Data results specific to each hypothesis are presented
+- Chapter review
+
+
+Here is a figure of Goldy.
+
+```{r goldy2, fig.cap="Goldy still rendered as a pencil drawing. This time we overrode the float using the 'H' option.", fig.pos="H"}
+include_graphics(path = "./figures/goldy.png")
+```
+
+You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+
+
+
+
+\clearpage
+
+<!-- clearpage ends the page, and also dumps out all floats.
+ Floats are things like tables and figures. It is useful to inlcude this at the end of each chapter. -->
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+% Turn off page numbering
+\pagestyle{empty}
+% Number early pages in unused series (to prevent PDF problems)
+\pagenumbering{Roman}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Make the title page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+{\Huge \textcolor{smartblue}{{\textsc{\MakeTextUppercase{{\thetitle}}}}}\\}
+
+% \textit{\subtitle}
+\textit{Sub title goes here. It is hard coded in the latex for now}
+
+\vskip 1in
+{\LARGE \adforn{21}}\\
+\vskip 0.75in
+\theauthor \\
+\monthyeardate\today
+
+\vskip 0.25in
+\textit{Draft} \\
+
+\vskip 0.75in
+
+Submitted in accordance with the requirements for the degree of\\Doctor of Philosophy \\[2ex]
+Analytics Department \\[-1.5ex]
+Harrisburg University
+
+\vfill
+% \vskip 0.75in
+
+\end{center}
+
+\makeatletter

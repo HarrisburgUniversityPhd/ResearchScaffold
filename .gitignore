@@ -1,0 +1,28 @@
+# Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+*.[Cc]ache
+
+# RStudio
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# WinMerge
+*.bak
+
+# Knit files
+*.html
+*.doc
+*.docx
+*.pdf
+
+# Force include lit review
+!LitReview/*.pdf
+
+# No compiled paper
+Paper/zzz_Dissertation_zzz.*

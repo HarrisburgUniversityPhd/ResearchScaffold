@@ -1,0 +1,37 @@
+--- 
+title: "My Predissertation Paper"
+subtitle: "my subtitle"
+author: "Tricia Marie McMillan"
+date: "`r Sys.Date()`"
+
+knit: 'bookdown::render_book'
+documentclass: memoir
+classoption: [12pt, letterpaper, oneside, oldfontcommands]
+
+bibliography: [
+	'../analysis/packages.bib',
+	'../literaturereview/references.bib']
+csl: "./style/apa.csl"
+link-citations: yes
+
+url: 'https\://github.com/HarrisburgUniversityPhd/ResearchScaffold'
+github-repo: HarrisburgUniversityPhd/ResearchScaffold
+---
+
+```{r load_pkgs, echo=FALSE, message=FALSE, warning=FALSE}
+library(bookdown)
+library(devtools)
+library(dplyr)
+library(ggplot2)
+library(knitr)
+library(kableExtra)
+
+options(knitr.kable.NA = '')
+```
+
+```{r child = 'frontmatter/index.rmd'}
+```
+
+```{=latex}
+\mainmatter
+```

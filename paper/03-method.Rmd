@@ -1,0 +1,71 @@
+# Methods
+
+As promised, here we reference the previous chapter, Chapter \@ref(review), using the chapter ID.
+
+\TeX\ is the best way to typeset mathematics.
+Donald Knuth designed \TeX\ when he got frustrated at how long it was taking the typesetters to finish his book, which contained a lot of mathematics.
+One nice feature of _R Markdown_ is its ability to read LaTeX code directly.
+
+<!-- Unnumbered equation, use '$$' -->
+
+$$
+\hat{Y_i} = \beta_0 + \beta_1(X_{1i}) + \beta_2(X_{2i})
+$$
+
+<!-- To have a numbered equation, use the \begin{equation} and \end{equation} to embed your mathematics rather than '$$' -->
+
+\begin{equation}
+Y_i = \beta_0 + \beta_1(X_{1i}) + \beta_2(X_{2i}) + \epsilon_i
+\end{equation}
+
+## Figures
+
+Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+
+```{r nice-fig, echo=FALSE, fig.cap='Here is a nice figure!', out.width='60%', fig.asp=.75, fig.align='center', fig.pos='H'}
+par(mar = c(4, 4, .1, .1))
+plot(pressure, type = 'b', pch = 19)
+```
+
+Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). 
+
+## Tables
+
+The easiest way to create a table is to use Excel to input the information for your table and save it as a CSV file.
+Then you can read in the CSV file, and use the `kable()` function from **knitr** to style the table.
+
+```{r nice-tab, echo=FALSE, message=FALSE}
+#Read in data
+gopher = readr::read_csv("../data/tab-gopher-women-sports.csv")
+
+# Create table
+knitr::kable(
+  gopher, 
+  caption = "2017 Ticket Sales and Operating Revenue for the University of Minnesota Women's Athletic Teams",
+  booktabs = TRUE
+)
+```
+
+Further table styling can be carried out via the **kableExtra** package; see https://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf.
+You can also reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
+
+```{r softw, echo=FALSE, message=FALSE}
+#Read in data
+tab_05 = readr::read_csv("../data/tab_05.csv")
+
+# Create table
+knitr::kable(
+  tab_05, 
+  align = c('c', 'c', 'c', 'c', 'c', 'c', 'c', 'l'),
+  caption = "Data Visualization Course Software",
+  booktabs = TRUE
+  ) %>%
+  kable_styling(font_size = 11, latex_options = "striped") %>%
+  column_spec(column = 8, width = "2in")
+```
+
+
+\clearpage
+
+<!-- clearpage ends the page, and also dumps out all floats.
+ Floats are things like tables and figures. It is useful to inlcude this at the end of each chapter. -->
