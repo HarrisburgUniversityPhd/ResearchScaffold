@@ -1,0 +1,43 @@
+## Footnotes and Endnotes
+
+You might want to footnote something. ^[footnote text] The footnote will be in a smaller font and placed appropriately. Endnotes work in much the same way. 
+
+## Citations
+
+You can write citations, too.
+For example, we are using the **bookdown** package `[@R-bookdown]` in this sample book, which was built on top of R Markdown and **knitr** `[@xie2015]`.
+For more information, including many different citation types, see [here](https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html#citations)
+
+## Bibliographies
+
+The BIB files are where we include the metadata (using BIBTeX) for the references.
+If you include additional BIB files,
+you also need to include those in the YAML section of `index.Rmd`. 
+
+For example, if you have the BIBTeX information for your references in a file called `my-predissertation-referces.bib`, you (1) place that BIB file in the `bib` folder, and (2) change the YAML for the `bibliography` line in the `index.Rmd` file to.
+
+```
+bibliography: ['bib/book.bib', 'bib/packages.bib', bib/my-predissertation-referces.bib]
+```
+
+There are a variety of reference tools that can export metadata to a BIB file. You can do this with:
+
+* Mendelay [[how-to](https://blog.mendeley.com/2011/10/25/howto-use-mendeley-to-create-citations-using-latex-and-bibtex/)]
+* Paperpile [[how-to](http://forum.paperpile.com/t/how-to-export-a-document-and-citations-to-latex-and-bibtex/784)]
+* Papers 
+* Zotero [[how-to](http://unimelb.libguides.com/c.php?g=565734&p=3897111)]
+
+## Styling the Bibliography
+
+If you look at the YAML header at the top of the `index.Rmd` file you can see that we can specify the style of the bibliography as `apalike` using the `biblio-style:` line in the YAML. 
+
+This can be changed by downloading a particualar CSL style file (see [here](https://www.zotero.org/styles)), and editing the YAML so that it uses the new style file.
+For more information, see [here](https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html#citation_styles)
+
+## Tips for Bibliographies
+
+* Like with thesis formatting, the sooner you start compiling your bibliography for something as large as thesis, the better. 
+* The cite key (a citation's label) needs to be unique from the other entries.
+* When you have more than one author or editor, you need to separate each author's name by the word "and" e.g. `Author = {Noble, Sam and Youngberg, Jessica},`.
+* Bibliographies made using BibTeX (whether manually or using a manager) accept LaTeX markup, so you can italicize and add symbols as necessary.
+* To force capitalization in an article title or where all lowercase is generally used, bracket the capital letter in curly braces in the BIB file.

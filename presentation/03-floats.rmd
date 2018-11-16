@@ -1,0 +1,17 @@
+# Floats
+
+One thing that may be annoying is the way _R Markdown_ handles "floats" like tables and figures (it's really LaTeX's fault).
+LaTeX will try to find the best place to put your object based on the text around it and until you're really, truly done writing you should just leave it where it lies.
+There are some optional arguments specified in the options parameter of the `label` function.
+If you need to shift your figure around, it might be good to look here on tweaking the options argument: <https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions>
+
+To override LaTeX's floating, we include the chunk option `pos="H"`.
+That will override the float and place the figure exactly where the code chunk is.
+This is a LaTeX positioning called from the **float** package, which is pre-loaded in the scaffolding style files.
+
+````
+```{r goldy2, fig.cap="Goldy still rendered as a pencil drawing. This time we overrode the float using the 'H' option.", fig.pos="H"}
+include_graphics(path = "figures/goldy.png")
+```
+````
+

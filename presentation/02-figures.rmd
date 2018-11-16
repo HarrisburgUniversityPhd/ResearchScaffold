@@ -1,0 +1,39 @@
+# Figures
+
+If your thesis has a lot of figures, _R Markdown_ might behave better for you than that other word processor.
+One perk is that it will automatically number the figures accordingly in each chapter.
+You'll also be able to create a label for each figure, add a caption, and then reference the figure in a way similar to what we saw with tables earlier.
+If you label your figures, you can move the figures around and _R Markdown_ will automatically adjust the numbering for you.
+No need for you to remember!
+So that you don't have to get too far into LaTeX to do this, a couple **R** functions have been created for you to assist.
+You'll see their use below.
+
+Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+
+We can import pictures that were not created in **R**. In the code chunk below, we will load in a picture stored as `goldy.png` in our `figures` directory.
+We then give it the caption of "Goldy rendered as a pencil drawing.", the label of "goldy", and specify that this is a figure.
+Make note of the different **R** chunk options that are given in the R Markdown file (not shown in the knitted document).
+
+````
+```{r goldy, fig.cap="Goldy rendered as a pencil drawing."}
+include_graphics(path = "figures/goldy.png")
+```
+````
+
+Here is a reference to the Goldy image: Figure `\@ref(fig:goldy)`. Note the use of the `fig:` code here.
+By naming the **R** chunk that contains the figure, we can then reference that figure later as done in the first sentence here.
+We can also specify the caption for the figure via the R chunk option `fig.cap`.
+
+You can, of course, also create figures using R syntax within a code chunk. 
+
+````
+```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center', fig.pos='H'}
+par(mar = c(4, 4, .1, .1))
+plot(pressure, type = 'b', pch = 19)
+```
+````
+
+Similar to our Goldy picture, we reference these figures through calling its code chunk label with the `fig:` prefix, e.g., see Figure `\@ref(fig:nice-fig)`. 
+
+
+*Note:* If you need it to appear in the list of figures or tables, it should be placed in a code chunk.

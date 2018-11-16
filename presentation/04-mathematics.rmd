@@ -1,0 +1,28 @@
+# Mathematics
+
+To use mathematics if you output to an HTML file, add the following at the end of the `index.Rmd` file.
+
+```
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+```
+
+
+Using LaTeX is the best way to typeset mathematics. One nice feature of _R Markdown_ is its ability to read LaTeX code directly. To include an un-numbered equation, use `$$`.
+
+```
+$$
+\hat{Y_i} = \beta_0 + \beta_1(X_{1i}) + \beta_2(X_{2i})
+$$
+```
+
+To include a numbered equation, use `\begin{equation}` and `\end{equation}` to embed your mathematics rather than `$$`
+
+```
+\begin{equation}
+Y_i = \beta_0 + \beta_1(X_{1i}) + \beta_2(X_{2i}) + \epsilon_i
+\end{equation}
+```

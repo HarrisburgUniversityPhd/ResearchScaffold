@@ -7,32 +7,28 @@ output:
     reference_doc: './style/hu-style.pptx'
 ---
 
-# In the morning
+```{r load_pkgs, echo=FALSE, message=FALSE, warning=FALSE}
+library(bookdown)
+library(devtools)
+library(dplyr)
+library(ggplot2)
+library(knitr)
+library(kableExtra)
 
-## Getting up
-
-- Turn off alarm
-- Get out of bed
-
-## Breakfast
-
-- Eat eggs
-- Drink coffee
-
-# In the evening
-
-## Dinner
-
-- Eat spaghetti
-- Drink wine
-
----
-
-```{r, cars, fig.cap="A scatterplot.", echo=FALSE}
-plot(cars)
+options(knitr.kable.NA = '')
 ```
 
-## Going to sleep
+```{r child = '01-tables.rmd'}
+```
 
-- Get in bed
-- Count sheep
+```{r child = '02-figures.rmd'}
+```
+
+```{r child = '03-floats.rmd'}
+```
+
+```{r child = '04-mathematics.rmd'}
+```
+
+```{r child = '05-citations.rmd'}
+```
