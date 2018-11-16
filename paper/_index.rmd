@@ -29,7 +29,7 @@ library(kableExtra)
 options(knitr.kable.NA = '')
 ```
 
-```{r child = 'frontmatter/index.rmd'}
+```{r child = './frontmatter/index.rmd'}
 ```
 
 ```{=latex}
