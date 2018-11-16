@@ -9,9 +9,9 @@ Unzip the folder.
 To use the scaffolding you will also need to have the following installed on your computer (instructions to follow):
 
 1. [RStudio][rstudio]
-2. A LaTeX Distribution like [TeXLive][texlive] or [MikTeX][miktex]
-3. Fonts used in the template [^ebgaramond], [^sourcecodepro], [^lato]
-4. A few R packages [^bookdown], [^devtools], [^dplyr], [^ggplot2], [^kableExtra], [^knitr], [^readr]
+2. A LaTeX Distribution like [TeXLive](https://www.tug.org/texlive) or [MikTeX](https://miktex.org)
+3. Fonts used in the template [1](https://github.com/georgd/EB-Garamond),[2](https://github.com/adobe-fonts/source-code-pro),[3](http://www.latofonts.com/lato-free-fonts)
+4. A few R packages [1](https://CRAN.R-project.org/package=bookdown),[2](https://CRAN.R-project.org/package=devtools),[3](https://CRAN.R-project.org/package=dplyr),[4](https://CRAN.R-project.org/package=ggplot2),[5](https://CRAN.R-project.org/package=kableExtra),[6](https://CRAN.R-project.org/package=knitr),[7](https://CRAN.R-project.org/package=readr)
 
 ## Understanding the scaffolding
 
@@ -25,13 +25,9 @@ The scaffolding paper is then compiled into a TeX document (`zzz_paper_zzz.tex`)
 If the PDF of the scaffolding paper successfully compiles, congratulations!
 You are ready to begin writing and adding your own content into the paper.
 
-
-
-
 ToDo:
 
 - [ ] Make subtitle link correctly
-- [ ] Update presentation to compile to PowerPoint once [RStudio][rstudio] 1.2 is live.
 
 
 ## More Detailed Information (\#protips)
@@ -242,12 +238,16 @@ This can be changed by downloading a particualar CSL style file (see https://www
 
 ## Credits, Notes, and Thanks
 
-The QME Predissertation Paper template draws inspiration from several places. This list is likely incomplete, but attempts to credit those that came before. "If I have seen further, it is because I stand on the shoulders of giants."
+This scaffold draws inspiration from several places.
+This list is likely incomplete, but attempts to credit those that came before.
 
-- [Michael Ekstrand](https://md.ekstrandom.net/resources/umn-thesis/) [[github](https://github.com/mdekstrand/umn-thesis)] for his inspired use of the `memoir` class to format scholarly work, the University of Minnesota thesis in particular.
-- [Ben Marwick](https://github.com/benmarwick/huskydown/blob/master/README.md) for his work on `huskydown` (a thesis template for the University of Washington), especially the font choice. 
-- [Yihui Xie](https://bookdown.org/yihui/bookdown/) for his work on `bookdown`, the work-horse beneath the template.
-- [RStudio Team](https://www.rstudio.com/) for their vision in creating RStudio, their continued resources in building educational resources, and their willingness to share all of it with the world.
+> "If I have seen further, it is because I stand on the shoulders of giants."
+
+* [Andrew Zieffler](https://ccaps.umn.edu/andrew-zieffler) [github](https://github.com/zief0002/predissertation-paper) for forming the basis of paper section
+* [Michael Ekstrand](https://md.ekstrandom.net/resources/umn-thesis/) [github](https://github.com/mdekstrand/umn-thesis)] for his inspired use of the `memoir` class to format scholarly work, the University of Minnesota thesis in particular.
+* [Ben Marwick](https://github.com/benmarwick/huskydown/blob/master/README.md) for his work on `huskydown` (a thesis template for the University of Washington), especially the font choice. 
+* [Yihui Xie](https://bookdown.org/yihui/bookdown/) for his work on `bookdown`, the work-horse beneath the template.
+* [RStudio Team][rstudio] for their vision in creating RStudio, their continued resources in building educational resources, and their willingness to share all of it with the world.
 
 
 ## License
@@ -265,17 +265,4 @@ The QME Predissertation Paper template draws inspiration from several places. Th
 </p>
 
 [github]: https://github.com
-[rstudio]: http://www.rstudio.com/products/rstudio/download/
-[teXlive]: https://www.tug.org/texlive/
-[mikteX]: https://miktex.org/
-[^ebgaramond]: https://github.com/georgd/EB-Garamond
-[^sourcecodepro]: https://github.com/adobe-fonts/source-code-pro/
-[^lato]: http://www.latofonts.com/lato-free-fonts/
-[^bookdown]: https://CRAN.R-project.org/package=bookdown
-[^devtools]: https://CRAN.R-project.org/package=devtools
-[^dplyr]: https://CRAN.R-project.org/package=dplyr
-[^ggplot2]: https://CRAN.R-project.org/package=ggplot2
-[^kableExtra]: https://CRAN.R-project.org/package=kableExtra
-[^knitr]: https://CRAN.R-project.org/package=knitr
-[^readr]: https://CRAN.R-project.org/package=readr
-
+[rstudio]: https://www.rstudio.com
